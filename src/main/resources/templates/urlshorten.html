@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+  <h1>URL Shorten Service</h1>
+  <hr/>
+  <form method="POST" th:action="@{/}" th:object="${urlshortenModel}">
+    Original URL: <input type="text" style="width: 80%;" th:field="*{originalURL}"/><br/>
+    Shorten URL: <input type="text" style="width: 80%;" th:field="*{shortenURL}" readonly="readonly"/><br/>
+    Expired Date: <input type="datetime" style="width: 80%;" th:field="*{expiredDate}" readonly="readonly"/><br/>
+    <button type="submit">Submit</button>
+  </form>
+  <hr/>
+</body>
+</html>
